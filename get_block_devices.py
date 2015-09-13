@@ -8,7 +8,7 @@ import subprocess
 from subprocess import CalledProcessError
 
 
-def get_user_data():
+def get_partition_data():
     block_dev_info = None
     try:
         proc = subprocess.Popen('blkid', stdout=subprocess.PIPE)
@@ -20,4 +20,4 @@ def get_user_data():
         print('output:', block_dev_info)
 
 if __name__ == '__main__':
-    get_user_data()
+    get_partition_data()
